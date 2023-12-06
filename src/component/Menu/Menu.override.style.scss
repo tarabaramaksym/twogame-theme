@@ -1,0 +1,400 @@
+:root {
+    --menu-item-padding-block: 11px;
+    --menu-item-padding-inline-start: 28px;
+    --menu-item-padding-inline-end: 16px;
+    --menu-desktop-submenu-width: 250px;
+    --menu-item-height: 60px;
+    --menu-total-height: var(--menu-item-height);
+}
+
+.Menu {
+    &-MenuWrapper {
+        background-color: var(--dark-color-1);
+        width: 100%;
+        margin: 0;
+
+        @include desktop-only {
+            background-color: var(--dark-color-3);
+        }
+
+        .ContentWrapper {
+            @include not-desktop {
+                padding-inline: 0;
+            }
+        }
+    }
+
+    &-MainCategories {
+        width: unset;
+
+        @include desktop-only {
+            margin: 0;
+        }
+    }
+
+    &-SubCategories {
+        @include desktop-only {
+            padding: 0;
+        }
+
+        &Wrapper {
+            @include desktop-only {
+                position: absolute;
+                width: 100%;
+            }
+
+            &Inner {
+                @include desktop-only {
+                    overflow: hidden;
+                    z-index: 5;
+                    border-end-start-radius: 10px;
+                    border-end-end-radius: 10px;
+                    border: 2px solid var(--dark-color-5);
+                }
+            }
+        }
+    }
+
+    &-Item {
+        margin: 0;
+        height: auto;
+        z-index: 1;
+
+        @include desktop-only {
+            height: var(--menu-item-height);
+        }
+
+        &:last-of-type {
+            margin-block-end: 0;
+
+            @include desktop-only {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .Menu {
+                &-Item {
+                    &Caption {
+                        color: var(--light-white);
+
+                        @include desktop-only {
+                            width: 100%;
+                            max-width: 279px;
+                            justify-content: center;
+                            background-color: var(--secondary-color-3);
+                        }
+                    }
+
+                    &Icon {
+                        @include not-desktop {
+                            color: var(--secondary-color-3)
+                        }
+                    }
+                }
+            }
+        }
+
+        &:not(:first-of-type) {
+            margin-inline-start: 0;
+        }
+
+        &Caption {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--white-color);
+            transition: all 0.2s ease-in-out;
+            padding-block: var(--menu-item-padding-block);
+            padding-inline-start: var(--menu-item-padding-inline-start);
+            padding-inline-end: var(--menu-item-padding-inline-end);
+            cursor: pointer;
+            margin: 0;
+            font-size: 14px;
+            font-weight: var(--regular-weight);
+            line-height: 18px;
+
+            @include not-desktop {
+                border-block-end: 1px solid var(--dark-color-6);
+            }
+
+            @include desktop-only {
+                font-size: 15px;
+                font-weight: var(--semi-bold-weight);
+            }
+
+            &:hover,
+            &_isExpanded {
+                color: var(--white-color);
+
+                @include desktop-only {
+                    color: var(--primary-color-6);
+                }
+            }
+
+            &_type {
+                &_main {
+                    font-size: 15px;
+                    font-weight: var(--semi-bold-weight);
+                    line-height: 24px;
+
+                    @include not-desktop {
+                        text-transform: none;
+                    }
+
+                    @include not-desktop {
+                        text-transform: none;
+                    }
+
+                    @include desktop-only {
+                        --menu-item-padding-block: 18px;
+                        --menu-item-padding-inline-start: 16px;
+
+                        display: flex;
+                        align-items: center;
+                        font-size: 16px;
+                        font-weight: var(--bold-weight);
+                        color: var(--light-neutral);
+                    }
+
+                    &.Menu {
+                        &-Item {
+                            &Caption {
+                                &_isExpanded {
+                                    @include desktop-only {
+                                        background-color: var(--dark-color-1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        @include desktop-only {
+                            background-color: var(--dark-color-1);
+                        }
+
+                        .ChevronIcon {
+                            @include desktop-only {
+                                color: var(--primary-color-6);
+                                transform: rotateZ(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+
+            #logout & {
+                color: var(--secondary-color-7);
+
+                .Menu {
+                    &-Item {
+                        &Icon {
+                            color: var(--secondary-color-7);
+                        }
+                    }
+                }
+            }
+        }
+
+        &Content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            @include desktop-only {
+                gap: 6px;
+            }
+        }
+
+        &Icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &List {
+            display: block;
+
+            @include desktop-only {
+                display: flex;
+            }
+
+            &_type {
+                &_main {
+                    @include not-desktop {
+                        border-block-start: 1px solid var(--dark-color-6);
+                    }
+                }
+            }
+        }
+    }
+
+    &-SubMenu {
+        margin-block-end: 0;
+        display: block;
+
+        @include not-desktop {
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition-property: max-height, opacity;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+        }
+
+        @include desktop-only {
+            display: flex;
+        }
+
+        & > * {
+            padding-block: 19px;
+        }
+
+        &_isVisible {
+            padding-inline: 0;
+            background-color: var(--dark-color-3);
+
+            @include not-desktop {
+                opacity: 1;
+                max-height: 100vh;
+            }
+        }
+
+        & .Menu {
+            &-Item {
+                &List {
+                    &_type {
+                        &_subcategory {
+                            @include not-desktop {
+                                padding-block: 0;
+                                columns: unset;
+                            }
+
+                            @include desktop-only {
+                                display: flex;
+                                flex-direction: column;
+                                width: var(--menu-desktop-submenu-width);
+                                background-color: var(--dark-color-1);
+                            }
+                        }
+                    }
+                }
+
+                &Caption {
+                    padding-block: var(--menu-item-padding-block);
+
+                    @include desktop-only {
+                        --menu-item-padding-inline-end: 10px;
+                    }
+
+                    &_type {
+                        &_subcategory {
+                            display: flex;
+
+                            @include not-desktop {
+                                color: var(--light-color-2);
+                            }
+
+                            @include desktop-only {
+                                width: 100%;
+                            }
+
+                            &:hover,
+                            &.Menu-ItemCaption_isExpanded {
+                                @include desktop-only {
+                                    background-color: var(--dark-color-3);
+                                }
+                            }
+
+                            .Menu {
+                                &-Item {
+                                    &Icon {
+                                        @include not-desktop {
+                                            color: var(--light-color-1)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-SubLevelDesktop {
+        width: 308px;
+
+        .Menu {
+            &-Item {
+                &Content {
+                    border-block-end: 1px solid transparent;
+                }
+
+                &Caption {
+                    font-weight: var(--regular-weight);
+
+                    &:hover {
+                        .Menu {
+                            &-Item {
+                                &Content {
+                                    border-block-end-color: var(--primary-color-6);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-ExpandedState {
+        position: static;
+        display: flex;
+        color: var(--dark-color-11);
+
+        @include desktop-only {
+            color: var(--light-color-1);
+        }
+
+        &_isExpanded {
+            @include desktop-only {
+                color: var(--primary-color-6);
+            }
+        }
+
+        &:dir(rtl),
+        &:dir(ltl) {
+            float: none;
+        }
+    }
+
+    &-Banners {
+        flex: 1;
+        padding-inline: 27px 28px;
+        background-color: var(--dark-color-2);
+    }
+
+    &-Overlay {
+        &_isVisible {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            inset-block-start: 0;
+            z-index: 0;
+
+            @include tablet {
+                display: none;
+                inset-block-start: 0;
+            }
+
+            @include mobile {
+                display: none;
+                inset-block-start: 0;
+                inset-inline-start: var(--menu-width);
+            }
+        }
+    }
+}

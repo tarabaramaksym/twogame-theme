@@ -1,0 +1,75 @@
+.FieldSelect {
+    height: 50px;
+
+    &_isHovered {
+        .FieldSelect-Clickable {
+            .FieldSelect-Select {
+                border-color: var(--dark-color-8);
+            }
+        }
+    }
+
+    &_isExpanded {
+        .FieldSelect-Clickable {
+            .FieldSelect-Select {
+                border-color: var(--dark-color-11);
+                border-end-start-radius: 0;
+                border-end-end-radius: 0;
+            }
+        }
+    }
+
+    &-Clickable {
+        width: 100%;
+        height: 100%;
+
+        .FieldSelect-Select {
+            height: 100%;
+            color: var(--grey-light-color);
+            font-size: 14px;
+            padding: 8px 8px 8px 12px;
+        }
+
+        @include desktop {
+            .FieldSelect-Select {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &-Options {
+        border-width: 0 var(--input-border-width) var(--input-border-width);
+        border-end-start-radius: var(--input-border-radius);
+        border-end-end-radius: var(--input-border-radius);
+
+        &_isExpanded {
+            border-color: var(--dark-color-11);
+
+            @include desktop {
+                background-color: var(--input-background-color);
+            }
+        }
+    }
+
+    &-Option {
+        background-color: inherit;
+        color: var(--grey-light-color);
+        padding-inline-start: 10px;
+        font-size: var(--input-font-size);
+
+        &_isHovered,
+        &:hover,
+        &:focus {
+            @include desktop {
+                background-color: var(--input-border-color-focus);
+            }
+        }
+    }
+
+    .ChevronIcon {
+        width: 24px;
+        height: 24px;
+        inset-inline-end: 8px;
+        fill: var(--dark-color-11);
+    }
+}

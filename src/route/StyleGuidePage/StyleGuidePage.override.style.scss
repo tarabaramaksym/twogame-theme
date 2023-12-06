@@ -1,0 +1,189 @@
+.StyleGuidePage {
+    background-color: inherit;
+
+    &-TabletContentWrapper {
+        border: 1px solid var(--primary-base-color);
+        max-width: 1024px;
+        padding-inline: var(--content-wrapper-padding-tablet);
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-MobileContentWrapper {
+        padding-inline: var(--content-wrapper-padding-mobile)
+    }
+
+    &-Container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+
+    &-Section {
+        flex: 1;
+
+        & > * {
+            margin-block-end: 8px;
+            inset: 0;
+        }
+
+        &_isSemiBold {
+            * {
+                font-weight: var(--semi-bold-weight);
+            }
+        }
+
+        &_isExtraBold {
+            * {
+                font-weight: var(--extra-bold-weight);
+            }
+        }
+    }
+
+    &-MobileTextStyles {
+        h1 {
+            line-height: var(--h1-line-height-mobile);
+        }
+
+        h2 {
+            line-height: var(--h2-line-height-mobile);
+        }
+
+        h3 {
+            line-height: var(--h3-line-height-mobile);
+        }
+
+        h4 {
+            font-size: var(--h4-font-size-mobile);
+            line-height: var(--h4-line-height-mobile);
+        }
+
+        h5 {
+            font-size: var(--h5-font-size-mobile);
+            line-height: var(--h5-line-height-mobile);
+        }
+
+        h6 {
+            font-size: var(--h6-font-size-mobile);
+            line-height: var(--h6-line-height-mobile);
+        }
+    }
+
+    &-Text {
+        &_isFocused,
+        &_isValid {
+            border-width: var(--input-border-width);
+            border-color: var(--input-border-color);
+        }
+
+        &_isFocused {
+            border-color: var(--input-border-color-focus);
+        }
+    }
+
+    &-Select {
+        &_isFocused,
+        &_hasError,
+        &_isValid {
+            border-width: var(--input-border-width);
+            border-color: var(--input-border-color);
+        }
+
+        &_isFocused {
+            border-color: var(--input-border-color-focus);
+        }
+    }
+
+    .FieldSelect {
+        width: 360px;
+
+        @include desktop {
+            width: 586px;
+        }
+    }
+
+    &-ErrorInput#errorCheckbox~.input-control, &-ErrorInput#errorRadio~.input-control {
+        border: 2px solid var(--primary-error-color);
+    }
+
+    &-HoveredInput#hoveredRadio~.input-control {
+        @include desktop {
+            --box-color: unset;
+
+            border-color: var(--dark-color-11);
+        }
+    }
+
+    &-ButtonsContainer {
+        margin-block-end: 24px;
+
+        .Button {
+            .AddIcon {
+                border: 2px solid var(--color-white);
+                fill: var(--color-white);
+                border-radius: 50%;
+                margin-inline-end: 10px;
+            }
+
+            &:disabled {
+                .AddIcon {
+                    fill: var(--dark-color-11);
+                    border-color: var(--dark-color-11);
+                }
+            }
+        }
+    }
+
+    &-ColorsContainer {
+        margin-block-end: 16px;
+    }
+
+    &-ColorsHeader {
+        margin-block-end: 16px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &-ColorsList {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+
+        & > div {
+            width: 130px;
+            height: 50px;
+            border-radius: 5px;
+        }
+    }
+
+    @for $i from 1 through 18 {
+        &-Primary-Color-#{$i} {
+            background-color: var(--primary-color-#{$i});
+        }
+    }
+
+    @for $i from 1 through 9 {
+        &-Secondary-Color-#{$i} {
+            background-color: var(--secondary-color-#{$i});
+        }
+    }
+
+    @for $i from 1 through 11 {
+        &-Dark-Color-#{$i} {
+            background-color: var(--dark-color-#{$i});
+        }
+    }
+
+    @for $i from 1 through 3 {
+        &-Light-Color-#{$i} {
+            background-color: var(--light-color-#{$i});
+        }
+    }
+}

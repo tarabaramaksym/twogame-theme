@@ -1,0 +1,144 @@
+// Primary colors
+$primary-base-color: #4a348f;
+$primary-color-1: #4a348f;
+$primary-color-2: #573da8;
+$primary-color-3: #6547c3;
+$primary-color-4: #7250db;
+$primary-color-5: #7f59f5;
+$primary-color-6: #8b66ff;
+$primary-color-7: #392499;
+$primary-color-8: #432ab2;
+$primary-color-9: #4d30cd;
+$primary-color-10: #5636e5;
+$primary-color-11: #603cff;
+$primary-color-12: #6643ff;
+$primary-color-13: #3b0f99;
+$primary-color-14: #4f14cc;
+$primary-color-15: #631aff;
+$primary-color-16: #7433ff;
+$primary-color-17: #864dff;
+$primary-color-18: #9766ff;
+
+// Secondary colors
+$secondary-color-1: #ad1746;
+$secondary-color-2: #c71b50;
+$secondary-color-3: #e01e5a;
+$secondary-color-4: #fa2164;
+$secondary-color-5: #ff2c6d;
+$secondary-color-6: #ff90e7;
+$secondary-color-7: #ff6d6d;
+$secondary-color-8: #00cf9f;
+$secondary-color-9: #80ca4e;
+
+// Dark colors
+$dark-color-1: #0d0d0d;
+$dark-color-2: #141414;
+$dark-color-3: #1b1b1b;
+$dark-color-4: #1f1e1f;
+$dark-color-5: #232223;
+$dark-color-6: #2e2d2e;
+$dark-color-7: #3d3b3d;
+$dark-color-8: #474547;
+$dark-color-9: #575457;
+$dark-color-10: #615e61;
+$dark-color-11: #6b686b;
+
+// Light colors
+$light-color-1: #8989a0;
+$light-color-2: #cccccc;
+$light-color-3: #f8fafc;
+$light-color-4: #d9d9d9;
+$light-white: #f2f2f2;
+$light-neutral: #eeeeee;
+$grey-light-color: #b2b0b7;
+
+// Other colors
+$header-color: #5432bc;
+$light-white-rgb: 242, 242, 242;
+$dark-color-6-rgb: 46, 45, 46;
+
+:root {
+    // Primary colors
+    --primary-base-color: #{$primary-base-color};
+    --primary-color-1: #{$primary-color-1};
+    --primary-color-2: #{$primary-color-2};
+    --primary-color-3: #{$primary-color-3};
+    --primary-color-4: #{$primary-color-4};
+    --primary-color-5: #{$primary-color-5};
+    --primary-color-6: #{$primary-color-6};
+    --primary-color-7: #{$primary-color-7};
+    --primary-color-8: #{$primary-color-8};
+    --primary-color-9: #{$primary-color-9};
+    --primary-color-10: #{$primary-color-10};
+    --primary-color-11: #{$primary-color-11};
+    --primary-color-12: #{$primary-color-12};
+    --primary-color-13: #{$primary-color-13};
+    --primary-color-14: #{$primary-color-14};
+    --primary-color-15: #{$primary-color-15};
+    --primary-color-16: #{$primary-color-16};
+    --primary-color-17: #{$primary-color-17};
+    --primary-color-18: #{$primary-color-18};
+
+    // Secondary colors
+    --secondary-color-1: #{$secondary-color-1};
+    --secondary-color-2: #{$secondary-color-2};
+    --secondary-color-3: #{$secondary-color-3};
+    --secondary-color-4: #{$secondary-color-4};
+    --secondary-color-5: #{$secondary-color-5};
+    --secondary-color-6: #{$secondary-color-6};
+    --secondary-color-7: #{$secondary-color-7};
+    --secondary-color-8: #{$secondary-color-8};
+    --secondary-color-9: #{$secondary-color-9};
+
+    // Dark colors
+    --dark-color-1: #{$dark-color-1};
+    --dark-color-2: #{$dark-color-2};
+    --dark-color-3: #{$dark-color-3};
+    --dark-color-4: #{$dark-color-4};
+    --dark-color-5: #{$dark-color-5};
+    --dark-color-6: #{$dark-color-6};
+    --dark-color-7: #{$dark-color-7};
+    --dark-color-8: #{$dark-color-8};
+    --dark-color-9: #{$dark-color-9};
+    --dark-color-10: #{$dark-color-10};
+    --dark-color-11: #{$dark-color-11};
+
+    // Light colors
+    --white-color: #{$white};
+    --light-color-1: #{$light-color-1};
+    --light-color-2: #{$light-color-2};
+    --light-color-3: #{$light-color-3};
+    --light-color-4: #{$light-color-4};
+    --light-white: #{$light-white};
+    --grey-light-color: #{$grey-light-color};
+    --light-neutral: #{$light-neutral};
+
+    // Other colors
+    --header-color: #{$header-color};
+    --light-white-rgb: #{$light-white-rgb};
+    --discount-color: #de1b55;
+    --dark-color-6-rgb: #{$dark-color-6-rgb};
+
+    // Font weights
+    --regular-weight: #{$regular};
+    --bold-weight: #{$bold};
+    --semi-bold-weight: #{$semi-bold};
+    --extra-bold-weight: #{$extra-bold};
+
+    // Header Heights
+
+    --header-height: 60px;
+    --header-nav-height: 60px;
+    --header-total-height: calc(var(--header-height) + var(--offline-notice-height) + var(--demo-notice-height) + env(safe-area-inset-top));
+
+    @include desktop {
+        --header-nav-height: 100px;
+        --header-top-menu-height: 0px;
+        --header-height: calc(var(--header-nav-height) + var(--header-top-menu-height) + var(--menu-total-height));
+    }
+
+    @include tablet {
+        --header-nav-height: 80px;
+        --header-height: calc(var(--header-nav-height) + var(--header-top-menu-height));
+    }
+}

@@ -1,0 +1,59 @@
+.CategoryFilterOverlay {
+    &-Wrapper {
+        @include mobile {
+            padding: var(--content-wrapper-padding-mobile);
+        }
+    }
+
+    &-Heading {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-block-end: 22px;
+        font-size: var(--subheading-font-size);
+        line-height: normal;
+
+        @include desktop {
+            display: none
+        }
+    }
+
+    &-CloseButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: var(--dark-color-8);
+        width: 24px;
+        height: 24px;
+        padding: 2px;
+
+        .CloseIcon {
+            fill: var(--light-color-4);
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &-Attributes {
+        padding: 0;
+
+        .ExpandableContent {
+            @include desktop {
+                padding: 0;
+            }
+
+            &:not(:last-child) {
+                @include desktop {
+                    border-block-end: 0;
+                }
+            }
+
+            &-Heading {
+                font-size: 16px;
+                font-weight: var(--bold-weight);
+                line-height: normal;
+            }
+        }
+    }
+}

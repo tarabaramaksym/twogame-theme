@@ -1,0 +1,49 @@
+.PaginationLink {
+    --color-pagination-link-text: var(--light-color-2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    line-height: 17px;
+    padding: 0;
+    margin-inline-end: 0;
+    min-width: 30px;
+    min-height: 30px;
+
+    &:hover {
+        @include desktop {
+            color: var(--primary-color-3);
+        }
+
+        @include mobile {
+            color: var(--light-color-2);
+        }
+    }
+
+    &_isCurrent {
+        border-color: var(--dark-color-5);
+
+        &:hover {
+            @include desktop {
+                color: var(--light-color-2);
+                border-color: var(--primary-color-3);
+            }
+        }
+    }
+
+    &_isArrow {
+        .ChevronIcon {
+            fill: var(--dark-color-11);
+        }
+
+        &:hover {
+            .ChevronIcon {
+                @include desktop {
+                    fill: var(--primary-color-3);
+                }
+            }
+        }
+    }
+}

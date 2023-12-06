@@ -1,0 +1,57 @@
+.ProductPrice {
+    min-height: unset;
+    display: flex;
+    flex-direction: row;
+
+    &-Price {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    &_hasDiscount {
+        .ProductPrice {
+            &-PriceWrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    }
+
+    &-PriceBadge {
+        color: var(--light-white);
+    }
+
+    &-PriceValue {
+        color: var(--light-white);
+        font-size: 16px;
+        line-height: normal;
+        margin: 0;
+        width: 100%;
+    }
+
+    &-DiscountPercentage {
+        border-radius: 20px;
+        background-color: var(--discount-color);
+        color: var(--light-white);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        height: 31px;
+        width: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-inline-end: 6px;
+        align-self: center;
+    }
+
+    del {
+        color: var(--light-color-1);
+        font-size: 12px;
+        opacity: 1;
+        line-height: normal;
+        font-weight: 400;
+        margin-inline-end: 0;
+    }
+}

@@ -1,0 +1,134 @@
+.CartOverlay {
+    background-color: transparent;
+    z-index: 100;
+
+    &::before {
+        display: none;
+    }
+
+    @include desktop {
+        width: 580px;
+        inset-block-start: calc(100% + 13px);
+    }
+
+    @include tablet {
+        width: 472px;
+    }
+
+    @include mobile {
+        position: fixed;
+        inset-inline: 16px;
+        inset-block-start: var(--header-total-height);
+    }
+
+    &-ContentWrapper {
+        background-color: var(--dark-color-2);
+        border: 2px solid var(--dark-color-5);
+        border-radius: 10px;
+        padding-block-end: 12px;
+
+        @include tablet {
+            padding-block-end: 12px;
+        }
+
+        @include mobile {
+            padding-block-end: 5px;
+        }
+    }
+
+    &-Items {
+        padding-inline: 0;
+        max-height: 371px;
+    }
+
+    &-Header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        background-color: var(--dark-color-4);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        @include desktop {
+            padding: 16px;
+        }
+
+        @include mobile {
+            gap: 12px;
+        }
+    }
+
+    &-CartInfo {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+        }
+    }
+
+    &-HeaderText {
+        margin-block-end: 5px;
+        line-height: normal;
+        color: var(--light-color-2);
+    }
+
+    &-Checkout {
+        width: 225px;
+        background-color: #7F59F5;
+        flex-shrink: 0;
+
+        @include tablet {
+            width: 186px;
+        }
+
+        @include mobile {
+            width: 197px;
+            flex-shrink: 1;
+            text-align: center;
+        }
+    }
+
+    &-ItemsCount {
+        font-size: 16px;
+        line-height: normal;
+        font-weight: 600;
+    }
+
+    &-Totals {
+        margin-inline: auto 11px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: normal;
+
+        @include mobile {
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+            margin-block-start: 16px;
+        }
+    }
+
+    .Draggable {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--dark-color-2);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--light-color-1);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--light-color-2);
+    }
+}

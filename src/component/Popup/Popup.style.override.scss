@@ -1,0 +1,31 @@
+.Popup {
+    &-Content {
+        background-color: var(--dark-color-2);
+        border-radius: 20px;
+        border: 2px solid var(--dark-color-5);
+        padding: 28px 28px 29px 28px;
+        width: 600px;
+        font-size: 16px;
+    }
+
+    &-Heading {
+        color: var(--light-white);
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 24px;
+        text-transform: none;
+        letter-spacing: unset;
+    }
+
+    & &-CloseBtn {
+        inset-inline-end: -12px;
+        inset-block-start: -12px;
+
+        .CloseIcon {
+            color: var(--light-color-4);
+            fill: var(--light-color-4);
+            height: 16px;
+            width: 16px;
+        }
+    }
+}

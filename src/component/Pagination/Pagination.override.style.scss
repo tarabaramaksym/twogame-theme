@@ -1,0 +1,20 @@
+.Pagination {
+    @include mobile {
+        display: flex;
+    }
+
+    &-ListItem {
+        min-width: unset;
+    }
+
+    .ChevronIcon {
+        height: unset;
+        width: unset;
+
+        &:hover {
+            @include desktop {
+                fill: var(--primary-color-3);
+            }
+        }
+    }
+}

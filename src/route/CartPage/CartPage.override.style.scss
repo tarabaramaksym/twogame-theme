@@ -1,0 +1,41 @@
+.CartPage {
+    &-Wrapper {
+        grid-template-columns: 1fr minmax(238px, 381px);
+        grid-column-gap: 30px;
+
+        @include tablet {
+            grid-column-gap: 28px;
+        }
+
+        @include mobile {
+            grid-column-gap: 12px;
+        }
+    }
+
+    &-Items {
+        padding-inline: 8px;
+        background-color: var(--dark-color-3);
+        border-radius: 20px;
+
+        @include desktop {
+            padding-inline: 16px;
+        }
+
+        @include mobile {
+            margin-block-end: 16px;
+            overflow-y: hidden;
+        }
+
+        .Draggable {
+            background-color: var(--dark-color-3);
+
+            &:not(.Draggable:last-child) {
+                .CartItem {
+                    &-Wrapper {
+                        border-block-end: solid 1px var(--dark-color-6);
+                    }
+                }
+            }
+        }
+    }
+}

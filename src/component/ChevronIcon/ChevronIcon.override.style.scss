@@ -1,0 +1,30 @@
+.ChevronIcon {
+    fill: currentColor;
+    transition: transform 0.2s ease-in-out;
+
+    &_direction {
+        &_left {
+            transform: rotate(90deg);
+
+            [dir="rtl"] & {
+                transform: rotate(-90deg);
+            }
+        }
+
+        &_right {
+            transform: rotate(-90deg);
+
+            [dir="rtl"] & {
+                transform: rotate(90deg);
+            }
+        }
+
+        &_top {
+            transform: rotate(180deg);
+        }
+
+        &_bottom {
+            transform: none;
+        }
+    }
+}

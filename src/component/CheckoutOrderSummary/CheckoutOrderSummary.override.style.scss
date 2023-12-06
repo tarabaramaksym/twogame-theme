@@ -1,0 +1,81 @@
+.CheckoutOrderSummary {
+    background-color: var(--dark-color-3);
+    margin: 0;
+
+    &-ButtonWrapper {
+        background-color: var(--dark-color-3);
+
+        .CheckoutOrderSummary {
+            &-SummaryItem {
+                &:first-child {
+                    padding-block: 0 16px;
+                }
+            }
+        }
+    }
+
+    &-Text {
+        color: var(--light-color-1);
+        font-size: 13px;
+        line-height: normal;
+
+        @include desktop {
+            font-size: 15px;
+        }
+    }
+
+    &-Price {
+        strong {
+            color: var(--color-white);
+            font-size: 13px;
+            line-height: normal;
+            font-weight: 400;
+
+            @include desktop {
+                font-size: 15px;
+            }
+        }
+    }
+
+    &-SummaryItem {
+        padding-block: 0 16px;
+
+        &:first-child {
+            padding-block-start: 16px;
+        }
+
+        &_isTotal {
+            border: none;
+            padding-block: 0 16px;
+
+            p {
+                font-size: 13px;
+                line-height: normal;
+                font-weight: 400;
+
+                @include desktop {
+                    font-size: 15px;
+                }
+            }
+
+            strong {
+                font-size: 16px;
+                font-weight: 600;
+
+                @include desktop {
+                    font-size: 18px;
+                }
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    .CartPage {
+        &-CheckoutButton {
+            margin-block: 5px 30px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.CategorySort {
+    display: flex;
+
+    .FieldSelect {
+        height: auto;
+
+        &-Clickable {
+            .FieldSelect {
+                &-SortSelect {
+                    @include mobile {
+                        font-size: 14px;
+                        line-height: 17px;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        margin-inline-end: 0;
+                        text-wrap: nowrap;
+                    }
+                }
+            }
+        }
+    }
+
+    .ChevronIcon {
+        display: none;
+    }
+}

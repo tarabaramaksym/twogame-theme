@@ -1,0 +1,18 @@
+:root {
+    --content-wrapper-width: 1440px;
+    --content-wrapper-padding: 120px;
+    --content-wrapper-padding-tablet: 20px;
+    --content-wrapper-padding-mobile: 15px;
+}
+
+.ContentWrapper {
+    padding-inline: var(--content-wrapper-padding);
+
+    @include tablet {
+        padding-inline: var(--content-wrapper-padding-tablet);
+    }
+
+    @include mobile {
+        padding-inline: var(--content-wrapper-padding-mobile);
+    }
+}

@@ -1,0 +1,37 @@
+:root {
+    --input-padding-inline: 11px;
+    --select-padding-inline: 12px;
+    --default-input-padding: 8px var(--input-padding-inline);
+    --input-background-color: var(--imported_input_background_color, var(--dark-color-1));
+    --input-border-width: var(--imported_input_border_width, 2px);
+    --input-border-color: var(--imported_input_border_color, var(--dark-color-5));
+    --input-border-color-focus: var(--imported_input_border_color_focus, var(--dark-color-8));
+    --input-border-color-typing: var(--imported_input_border_color_typing, var(--dark-color-11));
+    --input-border-radius: var(--imported_input_border_radius, 6px);
+    --input-color: var(--imported_input_color, var(--light-white));
+    --input-font-size: var(--imported_input_font_size, 16px);
+    --input-height: var(--imported_input_height, 50px);
+}
+
+input,
+textarea,
+select {
+    border-width: var(--input-border-width);
+    font-size: var(--input-font-size);
+
+    &:focus {
+        border-width: var(--input-border-width);
+
+        &:not(:placeholder-shown) {
+            border-color: var(--input-border-color-typing);
+        }
+    }
+}
+
+input {
+    height: var(--input-height);
+}
+
+select {
+    padding-inline: var(--select-padding-inline);
+}

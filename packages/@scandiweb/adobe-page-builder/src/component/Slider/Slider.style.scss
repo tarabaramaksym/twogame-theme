@@ -1,0 +1,13 @@
+.PageBuilderSlider {
+    .Slider {
+        &-Arrow {
+            &_isPrev {
+                inset-inline-start: 0;
+            }
+
+            &_isNext {
+                inset-inline-end: 0;
+            }
+        }
+    }
+}

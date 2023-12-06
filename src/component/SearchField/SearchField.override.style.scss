@@ -1,0 +1,145 @@
+.SearchField {
+    margin-inline: 39px 16px;
+
+    @include desktop {
+        margin-inline: 19px 22px;
+        width: 100%;
+        max-width: 585px;
+    }
+
+    @include tablet {
+        margin-inline: 55px 67px;
+    }
+
+    @include tablet {
+        margin-inline-start: 0;
+        margin-inline-end: 38px;
+    }
+
+    &-Input {
+        border-radius: 10px;
+        border: none;
+        z-index: 100;
+        background-color: rgba(var(--light-white-rgb), 0.9);
+        color: var(--dark-color-6);
+        height: 40px;
+        width: 100%;
+        font-size: 16px;
+
+        @include mobile {
+            transform: scaleX(0);
+            opacity: 0;
+            transform-origin: center;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+
+        &:hover {
+            @include desktop {
+                background-color: var(--light-white);
+                cursor: pointer;
+            }
+        }
+
+        &:focus {
+            border: none;
+        }
+
+        &::placeholder {
+            color: rgba(var(--dark-color-6-rgb), 0.8);
+        }
+
+        &_isActive {
+            background-color: var(--light-white);
+
+            @include mobile {
+                transform: scaleX(1);
+                opacity: 1;
+                width: 100%;
+            }
+        }
+    }
+
+    &-MobileSearch {
+        display: flex;
+        justify-content: center;
+        z-index: 100;
+        position: absolute;
+        width: calc(100% - 30px);
+        inset-inline: 15px;
+        pointer-events: none;
+
+        &_isActive {
+            pointer-events: all;
+        }
+
+        .SearchOverlay {
+            &-Results {
+                display: block;
+            }
+        }
+    }
+
+    &-MobileButton {
+        z-index: 100;
+        position: absolute;
+        cursor: pointer;
+        padding: 8px 16px;
+        background-color: var(--light-white);
+        border-radius: 10px;
+        height: 100%;
+        width: 81px;
+        opacity: 1;
+        transition: opacity 0.2s ease;
+        pointer-events: all;
+
+        &_isActive {
+            opacity: 0;
+        }
+
+        .SearchIcon {
+            fill: var(--dark-color-6);
+        }
+    }
+
+    &-SearchIcon {
+        cursor: pointer;
+        inset-inline-end: 16px;
+        inset-block: 8px;
+        z-index: 100;
+        fill: var(--dark-color-6);
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &-CloseIcon {
+        inset-inline-end: 16px;
+        z-index: 100;
+
+        @include desktop {
+            display: none;
+        }
+
+        @include tablet {
+            display: block;
+            inset-inline-end: 51px;
+            inset-block-start: 10px;
+        }
+    }
+
+    &-SearchInnerWrapper {
+        &_isActive {
+            width: 100%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+}

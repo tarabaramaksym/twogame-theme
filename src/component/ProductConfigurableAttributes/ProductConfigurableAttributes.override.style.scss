@@ -1,0 +1,64 @@
+.ProductConfigurableAttributes {
+    --expandable-content-padding-block: 22px;
+    --expandable-content-padding-inline-start: 0;
+    --expandable-content-padding-inline-end: 0;
+
+    &-Expandable {
+        &:first-of-type {
+            border-block-start: 1px solid var(--expandable-content-divider-color);
+        }
+    }
+
+    &-ExpandableContentContent {
+        &_isContentExpanded {
+            .ExpandableContentShowMore {
+                &-ExpandableChildren {
+                    &_isOpen {
+                        margin-block-start: 12px;
+                    }
+
+                    .ProductAttributeValue {
+                        &:last-of-type {
+                            .ProductAttributeValue {
+                                &-Text {
+                                    margin-block-end: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    &-DropDownList {
+        margin-block: 0 var(--expandable-content-padding-block);
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .ExpandableContentShowMore {
+            &-ShowAllButton {
+                &.Button {
+                    &_likeLink {
+                        margin-block-start: var(--expandable-content-padding-block);
+                    }
+                }
+            }
+        }
+    }
+
+    &-SwatchList {
+        margin-block: 0 var(--expandable-content-padding-block);
+
+        .ProductAttributeValue {
+            &-String {
+                margin-block-end: 0;
+            }
+        }
+    }
+}

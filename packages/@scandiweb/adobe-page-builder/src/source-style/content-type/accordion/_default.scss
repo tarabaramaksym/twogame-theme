@@ -1,0 +1,26 @@
+.Accordion {
+    margin-block-end: 24px;
+
+    @include mobile {
+        border-block-start: none;
+
+        &:last-of-type {
+            border-block-end: none;
+        }
+    }
+
+    @include desktop {
+        margin-block-end: 32px;
+    }
+
+    .ExpandableContent {
+        &-Heading {
+            font-size: 16px;
+        }
+
+        &-Content {
+            margin-block-start: 16px;
+            margin-inline-end: 14px;
+        }
+    }   
+}

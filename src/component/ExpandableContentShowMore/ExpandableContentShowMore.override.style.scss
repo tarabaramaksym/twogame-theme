@@ -1,0 +1,13 @@
+.ExpandableContentShowMore {
+    &-ShowAllButton.Button_likeLink {
+        margin-block-start: 12px;
+        font-weight: 500;
+        justify-content: flex-start;
+        color: var(--primary-color-3);
+
+        &:hover {
+            text-decoration: none;
+            color: var(--primary-color-6)
+        }
+    }
+}

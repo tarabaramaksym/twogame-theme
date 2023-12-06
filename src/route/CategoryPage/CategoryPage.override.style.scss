@@ -1,0 +1,82 @@
+.CategoryPage {
+    &-Wrapper {
+        @include desktop {
+            column-gap: 28px;
+            grid-template-columns: 279px auto;
+        }
+
+        @include tablet {
+            grid-template-columns: 238px auto;
+        }
+    }
+
+    &-Miscellaneous {
+        @include mobile {
+            inset-block: unset 44px;
+            width: fit-content;
+            background-color: var(--primary-color-3);
+            border-radius: 10px;
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+            border-block-end: none;
+            transition: none;
+        }
+
+        &LayoutWrapper {
+            @include mobile {
+                flex-direction: row-reverse;
+            }
+        }
+
+        &Divider {
+            width: 3px;
+            height: 21px;
+            background-color: var(--color-white);
+            margin-inline: 20px;
+            margin-block-start: 2px;
+
+            @include desktop {
+                display: none;
+            }
+        }
+
+        > * {
+            @include mobile {
+                padding-inline-start: 10px;
+                padding-inline-end: 10px;
+            }
+        }
+    }
+
+    &-Filter {
+        @include mobile {
+            color: var(--color-white);
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 600;
+        }
+
+        span {
+            color: inherit;
+        }
+
+        .FilterIcon {
+            color: inherit;
+        }
+    }
+
+    &-Subheading {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .SortByIcon {
+        margin-inline-end: 7px;
+        margin-block-start: 2px;
+
+        @include desktop {
+            display: none;
+        }
+    }
+}

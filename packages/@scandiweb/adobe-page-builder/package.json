@@ -1,0 +1,37 @@
+{
+    "name": "@scandiweb/adobe-page-builder",
+    "version": "1.0.1",
+    "description": "Adobe page builder frontend compatibility for ScandiPWA",
+    "license": "UNLICENSED",
+    "scandipwa": {
+        "type": "extension"
+    },
+    "dependencies": {
+        "eslint-plugin-header": "^3.1.1",
+        "google-maps-react": "^2.0.6",
+        "he": "^1.2.0"
+    },
+    "eslintConfig": {
+        "extends": "@scandipwa",
+        "plugins": [
+            "react",
+            "header"
+        ],
+        "rules": {
+            "max-lines": "off",
+            "@scandipwa/scandipwa-guidelines/only-render-in-component": "off",
+            "@scandipwa/scandipwa-guidelines/jsx-no-props-destruction": "off",
+            "header/header": [
+                2,
+                "block",
+                [
+                    "*",
+                    " * Adobe page builder compatibility for ScandiPWA",
+                    " * @copyright Scandiweb, Inc. All rights reserved.",
+                    " "
+                ],
+                2
+            ]
+        }
+    }
+}

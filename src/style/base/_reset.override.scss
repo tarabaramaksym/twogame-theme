@@ -1,0 +1,344 @@
+/* stylelint-disable number-max-precision */
+
+:root {
+    // display 1
+    --display-font-size: var(--imported_display_font_size, 72px);
+    --display-font-weight: var(--imported_display_font_weight, var(--bold-weight));
+    --display-color: var(--imported_display_color, var(--light-white));
+    --display-line-height: var(--imported_display_line_height, 80px);
+    --display-text-transform: var(--imported_display_text_transform, capitalize);
+    --display-font-style: var(--imported_display_font_style, normal);
+    --display-letter-spacing: var(--imported_display_letter_spacing, -2.88px);
+
+    // display 2
+    --display2-font-size: var(--imported_display2_font_size, 60px);
+    --display2-font-weight: var(--imported_display2_font_weight, var(--bold-weight));
+    --display2-color: var(--imported_display2_color, var(--light-white));
+    --display2-line-height: var(--imported_display2_line_height, 72px);
+    --display2-text-transform: var(--imported_display2_text_transform, capitalize);
+    --display2-font-style: var(--imported_display2_font_style, normal);
+    --display2-letter-spacing: var(--imported_display2_letter_spacing, -2.4px);
+
+    // h1 desktop
+    --h1-font-size: var(--imported_h1_font_size, 48px);
+    --h1-color: var(--imported_h1_color, var(--light-white));
+    --h1-line-height: var(--imported_h1_line_height, 56px);
+    --h1-letter-spacing: var(--imported_h1_letter_spacing, -1.92px);
+
+    // h1 mobile
+    --h1-font-size-mobile: var(--imported_h1Mobile_font_size, 34px);
+    --h1-color-mobile: var(--imported_h1Mobile_color, var(--light-white));
+    --h1-line-height-mobile: var(--imported_h1Mobile_line_height, 40px);
+    --h1-letter-spacing-mobile: var(--imported_h1Mobile_letter_spacing, -1.36px);
+
+    // h2 desktop
+    --h2-font-size: var(--imported_h2_font_size, 39px);
+    --h2-color: var(--imported_h2_color, var(--light-white));
+    --h2-line-height: var(--imported_h2_line_height, 47px);
+    --h2-letter-spacing: var(--imported_h2_letter_spacing, -0.78px);
+
+    // h2 mobile
+    --h2-font-size-mobile: var(--imported_h2Mobile_font_size, 33px);
+    --h2-color-mobile: var(--imported_h2Mobile_color, var(--light-white));
+    --h2-line-height-mobile: var(--imported_h2Mobile_line_height, 40px);
+    --h2-letter-spacing-mobile: var(--imported_h2Mobile_letter_spacing, -0.66px);
+
+    // h3 desktop
+    --h3-font-size: var(--imported_h3_font_size, 33px);
+    --h3-color: var(--imported_h3_color, var(--light-white));
+    --h3-line-height: var(--imported_h3_line_height, 40px);
+    --h3-letter-spacing: var(--imported_h3_letter_spacing, -0.66px);
+
+    // h3 mobile
+    --h3-font-size-mobile: var(--imported_h3Mobile_font_size, 28px);
+    --h3-color-mobile: var(--imported_h3Mobile_color, var(--light-white));
+    --h3-line-height-mobile: var(--imported_h3Mobile_line_height, 34px);
+    --h3-letter-spacing-mobile: var(--imported_h3Mobile_letter_spacing, -0.56px);
+
+    // h4 desktop
+    --h4-font-size: var(--imported_h4_font_size, 28px);
+    --h4-font-weight: var(--imported_h4_font_weight, var(--bold-weight));
+    --h4-color: var(--imported_h4_color, var(--light-white));
+    --h4-line-height: var(--imported_h4_line_height, 34px);
+    --h4-text-transform: var(--imported_h4_text_transform, capitalize);
+    --h4-font-style: var(--imported_h4_font_style, normal);
+    --h4-letter-spacing: var(--imported_h4_letter_spacing, -0.56px);
+
+    // h4 mobile
+    --h4-font-size-mobile: var(--imported_h4Mobile_font_size, 23px);
+    --h4-font-weight-mobile: var(--imported_h4Mobile_font_weight, var(--bold-weight));
+    --h4-color-mobile: var(--imported_h4Mobile_color, var(--light-white));
+    --h4-line-height-mobile: var(--imported_h4Mobile_line_height, 28px);
+    --h4-text-transform-mobile: var(--imported_h4Mobile_text_transform, capitalize);
+    --h4-font-style-mobile: var(--imported_h4Mobile_font_style, normal);
+    --h4-letter-spacing-mobile: var(--imported_h4Mobile_letter_spacing, -0.46px);
+
+    // h5 desktop
+    --h5-font-size: var(--imported_h5_font_size, 23px);
+    --h5-font-weight: var(--imported_h5_font_weight, var(--bold-weight));
+    --h5-color: var(--imported_h5_color, var(--light-white));
+    --h5-line-height: var(--imported_h5_line_height, 28px);
+    --h5-text-transform: var(--imported_h5_text_transform, capitalize);
+    --h5-font-style: var(--imported_h5_font_style, normal);
+    --h5-letter-spacing: var(--imported_h5_letter_spacing, -0.46px);
+
+    // h5 mobile
+    --h5-font-size-mobile: var(--imported_h5Mobile_font_size, 19px);
+    --h5-font-weight-mobile: var(--imported_h5Mobile_font_weight, var(--bold-weight));
+    --h5-color-mobile: var(--imported_h5Mobile_color, var(--light-white));
+    --h5-line-height-mobile: var(--imported_h5Mobile_line_height, 23px);
+    --h5-text-transform-mobile: var(--imported_h5Mobile_text_transform, capitalize);
+    --h5-font-style-mobile: var(--imported_h5Mobile_font_style, normal);
+    --h5-letter-spacing-mobile: var(--imported_h5Mobile_letter_spacing, -0.38px);
+
+    // h6 desktop
+    --h6-font-size: var(--imported_h6_font_size, 19px);
+    --h6-font-weight: var(--imported_h6_font_weight, var(--bold-weight));
+    --h6-color: var(--imported_h6_color, var(--light-white));
+    --h6-line-height: var(--imported_h6_line_height, 23px);
+    --h6-text-transform: var(--imported_h6_text_transform, capitalize);
+    --h6-font-style: var(--imported_h6_font_style, normal);
+    --h6-letter-spacing: var(--imported_h6_letter_spacing, -0.38px);
+
+    // h6 mobile
+    --h6-font-size-mobile: var(--imported_h6Mobile_font_size, 14px);
+    --h6-font-weight-mobile: var(--imported_h6Mobile_font_weight, var(--bold-weight));
+    --h6-color-mobile: var(--imported_h6Mobile_color, var(--light-white));
+    --h6-line-height-mobile: var(--imported_h6Mobile_line_height, 20px);
+    --h6-text-transform-mobile: var(--imported_h6Mobile_text_transform, capitalize);
+    --h6-font-style-mobile: var(--imported_h6Mobile_font_style, normal);
+    --h6-letter-spacing-mobile: var(--imported_h6_letter_spacing, -0.28px);
+
+    // subheading
+    --subheading-font-size: var(--imported_subheading_font_size, 20px);
+    --subheading-font-weight: var(--imported_subheading_font_weight, var(--regular-weight));
+    --subheading-color: var(--imported_subheading_color, var(--light-white));
+    --subheading-line-height: var(--imported_subheading_line_height, 28px);
+    --subheading-text-transform: var(--imported_subheading_text_transform, capitalize);
+    --subheading-font-style: var(--imported_subheading_font_style, normal);
+
+    // paragraph
+    --paragraph-line-height: var(--imported_paragraph_line_height, 17px);
+    --paragraph-color: var(--imported_paragraph_color, var(--light-white));
+
+    // paragraph mobile
+    --paragraph-font-size-mobile: var(--imported_paragraphMobile_font_size, var(--paragraph-font-size));
+    --paragraph-font-weight-mobile: var(--imported_paragraphMobile_font_weight, var(--paragraph-font-weight));
+    --paragraph-color-mobile: var(--imported_paragraphMobile_color, var(--paragraph-color));
+    --paragraph-line-height-mobile: var(--imported_paragraphMobile_line_height, var(--paragraph-line-height));
+    --paragraph-text-transform-mobile: var(--imported_paragraphMobile_text_transform, var(--paragraph-text-transform));
+    --paragraph-font-style-mobile: var(--imported_paragraphMobile_font_style, var(--paragraph-font-style));
+
+    // paragraph 2
+    --paragraph2-font-size: var(--imported_paragraph2_font_size, 16px);
+    --paragraph2-font-weight: var(--imported_paragraph2_font_weight, var(--regular-weight));
+    --paragraph2-color: var(--imported_paragraph2_color, var(--light-white));
+    --paragraph2-line-height: var(--imported_paragraph2_line_height, 24px);
+    --paragraph2-text-transform: var(--imported_paragraph2_text_transform, none);
+    --paragraph2-font-style: var(--imported_paragraph2_font_style, normal);
+
+    // paragraph 3
+    --paragraph3-font-size: var(--imported_paragraph3_font_size, 18px);
+    --paragraph3-font-weight: var(--imported_paragraph3_font_weight, var(--regular-weight));
+    --paragraph3-color: var(--imported_paragraph3_color, var(--light-white));
+    --paragraph3-line-height: var(--imported_paragraph3_line_height, 22px);
+    --paragraph3-text-transform: var(--imported_paragraph3_text_transform, none);
+    --paragraph3-font-style: var(--imported_paragraph3_font_style, normal);
+
+    // caption
+    --caption-color: var(--imported_caption_color, var(--light-white));
+    --caption-line-height: var(--imported_caption_line_height, 18px);
+
+    // caption mobile
+    --caption-font-size-mobile: var(--imported_captionMobile_font_size, var(--caption-font-size));
+    --caption-font-weight-mobile: var(--imported_captionMobile_font_weight, var(--caption-font-weight));
+    --caption-color-mobile: var(--imported_captionMobile_color, var(--caption-color));
+    --caption-line-height-mobile: var(--imported_captionMobile_line_height, var(--caption-line-height));
+    --caption-text-transform-mobile: var(--imported_captionMobile_text_transform, var(--caption-text-transform));
+    --caption-font-style-mobile: var(--imported_captionMobile_font_style, var(--caption-font-style));
+
+    // footer
+    --footer-font-size: var(--imported_footer_font_size, 10px);
+    --footer-font-weight: var(--imported_footer_font_weight, var(--regular-weight));
+    --footer-color: var(--imported_footer_color, var(--light-white));
+    --footer-line-height: var(--imported_footer_line_height, 14px);
+    --footer-text-transform: var(--imported_footer_text_transform, none);
+    --footer-font-style: var(--imported_footer_font_style, normal);
+    --footer-letter-spacing: var(--imported_footer_letter_spacing, 0.2px);
+}
+
+body {
+    color: var(--light-white);
+    background-color: var(--dark-color-1);
+    font-family: $font-Inter;
+
+    > iframe[style*="2147483647"] {
+        display: none;
+    }
+}
+
+* {
+    text-shadow: none;
+}
+
+a {
+    color: var(--light-white);
+}
+
+li {
+    & * {
+        color: inherit;
+    }
+}
+
+h1 {
+    letter-spacing: var(--h1-letter-spacing-mobile);
+
+    @include desktop {
+        letter-spacing: var(--h1-letter-spacing);
+    }
+}
+
+h2 {
+    letter-spacing: var(--h2-letter-spacing-mobile);
+
+    @include desktop {
+        letter-spacing: var(--h2-letter-spacing);
+    }
+}
+
+h3 {
+    letter-spacing: var(--h3-letter-spacing-mobile);
+
+    @include desktop {
+        letter-spacing: var(--h3-letter-spacing);
+    }
+}
+
+h4 {
+    color: var(--h4-color-mobile);
+    font-size: var(--h4-font-size-mobile);
+    font-style: var(--h4-font-style-mobile);
+    font-weight: var(--h4-font-weight-mobile);
+    line-height: var(--h4-line-height-mobile);
+    text-transform: var(--h4-text-transform-mobile);
+    letter-spacing: var(--h4-letter-spacing-mobile);
+
+    @include desktop {
+        color: var(--h4-color);
+        font-size: var(--h4-font-size);
+        font-style: var(--h4-font-style);
+        font-weight: var(--h4-font-weight);
+        line-height: var(--h4-line-height);
+        text-transform: var(--h4-text-transform);
+        letter-spacing: var(--h4-letter-spacing);
+    }
+}
+
+h5 {
+    color: var(--h5-color-mobile);
+    font-size: var(--h5-font-size-mobile);
+    font-style: var(--h5-font-style-mobile);
+    font-weight: var(--h5-font-weight-mobile);
+    line-height: var(--h5-line-height-mobile);
+    text-transform: var(--h5-text-transform-mobile);
+    letter-spacing: var(--h5-letter-spacing-mobile);
+
+    @include desktop {
+        color: var(--h5-color);
+        font-size: var(--h5-font-size);
+        font-style: var(--h5-font-style);
+        font-weight: var(--h5-font-weight);
+        line-height: var(--h5-line-height);
+        text-transform: var(--h5-text-transform);
+        letter-spacing: var(--h5-letter-spacing);
+    }
+}
+
+h6 {
+    color: var(--h6-color-mobile);
+    font-size: var(--h6-font-size-mobile);
+    font-style: var(--h6-font-style-mobile);
+    font-weight: var(--h6-font-weight-mobile);
+    line-height: var(--h6-line-height-mobile);
+    text-transform: var(--h6-text-transform-mobile);
+    letter-spacing: var(--h6-letter-spacing-mobile);
+
+    @include desktop {
+        color: var(--h6-color);
+        font-size: var(--h6-font-size);
+        font-style: var(--h6-font-style);
+        font-weight: var(--h6-font-weight);
+        line-height: var(--h6-line-height);
+        text-transform: var(--h6-text-transform);
+        letter-spacing: var(--h4-letter-spacing);
+    }
+}
+
+.Display {
+    color: var(--display-color);
+    font-size: var(--display-font-size);
+    font-style: var(--display-font-style);
+    font-weight: var(--display-font-weight);
+    line-height: var(--display-line-height);
+    text-transform: var(--display-text-transform);
+    letter-spacing: var(--display-letter-spacing);
+
+    &-2 {
+        color: var(--display2-color);
+        font-size: var(--display2-font-size);
+        font-style: var(--display2-font-style);
+        font-weight: var(--display2-font-weight);
+        line-height: var(--display2-line-height);
+        text-transform: var(--display2-text-transform);
+        letter-spacing: var(--display2-letter-spacing);
+    }
+}
+
+.Subheading {
+    color: var(--subheading-color);
+    font-size: var(--subheading-font-size);
+    font-style: var(--subheading-font-style);
+    font-weight: var(--subheading-font-weight);
+    line-height: var(--subheading-line-height);
+    text-transform: var(--subheading-text-transform);
+}
+
+.Paragraph {
+    color: var(--paragraph-color);
+    font-size: var(--paragraph-font-size);
+    font-style: var(--paragraph-font-style);
+    font-weight: var(--paragraph-font-weight);
+    line-height: var(--paragraph-line-height);
+    text-transform: var(--paragraph-text-transform);
+
+    &-2 {
+        color: var(--paragraph2-color);
+        font-size: var(--paragraph2-font-size);
+        font-style: var(--paragraph2-font-style);
+        font-weight: var(--paragraph2-font-weight);
+        line-height: var(--paragraph2-line-height);
+        text-transform: var(--paragraph2-text-transform);
+    }
+
+    &-3 {
+        color: var(--paragraph3-color);
+        font-size: var(--paragraph3-font-size);
+        font-style: var(--paragraph3-font-style);
+        font-weight: var(--paragraph3-font-weight);
+        line-height: var(--paragraph3-line-height);
+        text-transform: var(--paragraph3-text-transform);
+    }
+}
+
+.Footer {
+    &-Text {
+        color: var(--footer-color);
+        font-size: var(--footer-font-size);
+        font-style: var(--footer-font-style);
+        font-weight: var(--footer-font-weight);
+        line-height: var(--footer-line-height);
+        text-transform: var(--footer-text-transform);
+        letter-spacing: var(--footer-letter-spacing);
+    }
+}

@@ -1,0 +1,10 @@
+.ProductCard {
+    &-PriceWrapper {
+        align-items: flex-end;
+        background-color: var(--dark-color-1);
+    }
+
+    &-Price {
+        width: fit-content;
+    }
+}

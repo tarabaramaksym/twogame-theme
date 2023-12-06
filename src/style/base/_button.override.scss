@@ -1,0 +1,66 @@
+:root {
+    --button-height: 40px;
+    --button-hover-height: 40px;
+    --button-background: var(--primary-color-3);
+    --button-hover-background: var(--primary-color-5);
+    --button-padding: 10px;
+    --button-hover-padding: 10px;
+    --button-border-radius: 10px;
+    --button-hover-border-radius: 10px;
+
+    --hollow-button-height: 35px;
+    --hollow-button-hover-height: 35px;
+    --hollow-button-hover-color: var(--color-white);
+    --hollow-button-hover-background: var(--dark-color-6);
+    --hollow-button-padding: 10px;
+    --hollow-button-hover-padding: 10px;
+    --hollow-button-border-radius: 10px;
+    --hollow-button-hover-border-radius: 10px;
+}
+
+button {
+    * {
+        color: inherit;
+    }
+}
+
+.Button {
+    border: none;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 600;
+
+    &_Medium {
+        min-width: 247px;
+    }
+
+    &_Large {
+        min-width: 349px;
+    }
+
+    &_isHollow {
+        background-color: var(--dark-color-4);
+        color: var(--color-white);
+        font-size: 12px;
+    }
+
+    &_likeLink {
+        font-size: 15px;
+        color: var(--primary-color-4);
+
+        &:hover {
+            &:not(:disabled) {
+                @include desktop {
+                    color: var(--primary-color-6);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &:disabled {
+        background-color: var(--dark-color-4);
+        color: var(--dark-color-11);
+        opacity: 1;
+    }
+}

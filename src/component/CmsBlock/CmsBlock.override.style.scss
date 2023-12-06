@@ -1,0 +1,35 @@
+@mixin containerStyles {
+    max-width: var(--content-wrapper-width);
+    margin-inline: auto;
+}
+
+@mixin paddingStyles {
+    padding-inline: var(--content-wrapper-padding-mobile);
+
+    @include desktop {
+        padding-inline: var(--content-wrapper-padding);
+    }
+
+    @include tablet {
+        padding-inline: var(--content-wrapper-padding-tablet);
+    }
+}
+
+.CmsBlock {
+    &-Wrapper {
+        [data-content-type=row] {
+            &[data-appearance=contained] {
+                & > * {
+                    @include containerStyles;
+                    @include paddingStyles;
+                }
+            }
+
+            &[data-appearance=full-width] {
+                .row-full-width-inner {
+                    @include paddingStyles;
+                }
+            }
+        }
+    }
+}

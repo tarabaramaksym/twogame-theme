@@ -1,0 +1,60 @@
+.SearchOverlay {
+    &-Results {
+        width: 100%;
+        max-height: 504px;
+        border-radius: 10px;
+        background-color: var(--dark-color-4);
+        border: 2px solid var(--dark-color-5);
+        margin-block-start: 10px;
+        overflow: hidden;
+
+        @include mobile {
+            width: calc(100% + 32px);
+            max-height: 545px;
+            inset-inline-start: -16px;
+            position: absolute;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
+
+    &-ItemsHolder {
+        scrollbar-width: thin;
+        scrollbar-color: var(--dark-color-4) transparent;
+        padding-inline-end: 0;
+
+        @include mobile {
+            max-height: 492px;
+            overflow-y: scroll;
+        }
+
+        &::-webkit-scrollbar {
+            position: absolute;
+            width: 1px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--dark-color-3);
+            border-radius: 4px;
+        }
+    }
+
+    &-ViewAllButton {
+        cursor: pointer;
+        text-align: center;
+        padding-block: 11px;
+        line-height: 19px;
+        color: var(--color-white);
+        width: 100%;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .NoResults {
+        font-weight: 500;
+    }
+}

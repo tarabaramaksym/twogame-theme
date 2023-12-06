@@ -1,0 +1,17 @@
+.CmsPage {
+    &-Wrapper {
+        &_page_width {
+            &_default {
+                padding-inline: var(--content-wrapper-padding);
+
+                @include tablet {
+                    padding-inline: var(--content-wrapper-padding-tablet);
+                }
+
+                @include mobile {
+                    padding-inline: var(--content-wrapper-padding-mobile);
+                }
+            }
+        }
+    }
+}

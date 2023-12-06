@@ -1,0 +1,76 @@
+:root {
+    --option-background-color: var(--dark-color-1);
+    --option-text-color: #{$white};
+    --option-size: 20px;
+}
+
+.ProductAttributeValue {
+    &:hover {
+        --option-text-color: #{$white}
+    }
+
+    &:last-of-type {
+        .ProductAttributeValue {
+            &-Text {
+                margin-block-end: 0;
+            }
+        }
+    }
+
+    &-Text {
+        padding-block-end: 0;
+        margin-block-end: 10px;
+
+        &:hover,
+        &:focus {
+            label {
+                @include desktop {
+                    border-color: var(--primary-base-color);
+                }
+            }
+
+            .Field-CheckboxLabel {
+                .input-control {
+                    border-color: var(--dark-color-11);
+                }
+            }
+
+            .input-control {
+                &::after {
+                    @include desktop {
+                        --checkmark-color: inherit;
+                    }
+                }
+            }
+        }
+
+        label {
+            &:first-of-type {
+                line-height: normal;
+
+                .input-control {
+                    width: var(--option-size);
+                    height: var(--option-size);
+                    border-color: var(--input-color);
+                    margin-block-start: 0;
+                }
+            }
+        }
+    }
+
+    &-SubLabel {
+        font-size: inherit;
+    }
+
+    .Field {
+        &-Checkbox {
+            &Label {
+                &:hover {
+                    @include desktop {
+                        color: #{$white};
+                    }
+                }
+            }
+        }
+    }
+}

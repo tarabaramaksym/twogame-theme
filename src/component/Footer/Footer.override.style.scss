@@ -1,0 +1,169 @@
+.Footer {
+    background-color: var(--dark-color-2);
+
+    &-Payments {
+        &Wrapper {
+            padding-block: 19px 25px;
+            background-color: var(--dark-color-4);
+
+            @include desktop {
+                padding-block: 34px;
+            }
+
+            @include tablet {
+                padding-block: 17px 22px;
+            }
+        }
+
+        &Logos {
+            @include mobile {
+                display: none;
+            }
+
+            &_IsMobile {
+                @include desktop {
+                    display: none;
+                }
+            }
+
+            &, &_IsMobile {
+                > * {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 20px;
+
+                    @include mobile {
+                        overflow-x: auto;
+                        -ms-overflow-style: none;
+                        scrollbar-width: none;
+                    }
+
+                    @include desktop {
+                        gap: 18px 30px;
+                        flex-wrap: wrap;
+                    }
+
+                    @include tablet {
+                        justify-content: center;
+                    }
+
+                    &::-webkit-scrollbar {
+                        @include mobile {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &Text {
+            font-size: var(--h6-font-size-mobile);
+            font-weight: 500;
+            margin-block-end: 18px;
+            line-height: normal;
+
+            @include desktop {
+                font-size: var(--subheading-font-size);
+            }
+
+            @include tablet {
+                text-align: center;
+            }
+        }
+    }
+
+    &-Header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        margin-block-end: 24px;
+        margin-inline: auto;
+        max-width: var(--content-wrapper-width);
+        padding-inline: var(--content-wrapper-padding);
+        padding-block-start: 33px;
+
+        @include mobile {
+            padding-inline: 53px 60px;
+        }
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-block-end: 23px;
+            padding-inline: 20px;
+            padding-block-start: 35px;
+        }
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-block-end: 21px;
+            padding-block-start: 51px;
+        }
+    }
+
+    &-Content {
+        background-color: var(--dark-color-2);
+    }
+
+    &-Columns {
+        padding: 0 var(--content-wrapper-padding);
+
+        @include mobile {
+            padding-inline: var(--content-wrapper-padding-mobile);
+        }
+    }
+
+    &-ColumnItem {
+        font-weight: 500;
+    }
+
+    &-CopyrightContentWrapper {
+        padding-block: 22px 21px;
+        background-color: var(--dark-color-4);
+    }
+
+    &-CopyrightContent {
+        padding-block: 0;
+        min-height: unset;
+    }
+
+    &-Copyright {
+        color: var(--light-white);
+        font-size: 13px;
+
+        @include mobile {
+            padding-inline: 15px;
+        }
+
+        @include tablet {
+            padding-inline: 20px;
+        }
+    }
+
+    &-ScrollButton {
+        --button-padding: 5px;
+        --button-hover-padding: 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px auto;
+        height: 40px;
+        width: 40px;
+
+        .ChevronIcon {
+            fill: var(--light-white);
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    .Logo {
+        height: 45px;
+        width: 142px;
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,46 @@
+:root {
+    --breadcrumb-line-height: 22px;
+}
+
+.Breadcrumb {
+    $crumb-padding: 8px;
+
+    padding-inline-end: $crumb-padding;
+    color: var(--light-color-1);
+    font-size: var(--paragraph2-font-size);
+    line-height: var(--breadcrumb-line-height);
+
+    &::before {
+        content: '/';
+        margin-inline-end: 8px;
+        position: relative;
+        inset-inline-start: 0;
+        padding-inline-end: 0;
+        line-height: var(--breadcrumb-line-height);
+    }
+
+    &:first-child {
+        &::before {
+            content: none;
+        }
+
+        .G2Icon {
+            fill: var(--light-color-1);
+            inset-block-start: 5px;
+        }
+    }
+
+    &-Link {
+        color: var(--light-color-1);
+        font-size: var(--paragraph2-font-size);
+
+        &:hover {
+            color: var(--light-color-1);
+        }
+
+        &_isBlank {
+            pointer-events: none;
+        }
+    }
+}
+

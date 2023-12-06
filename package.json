@@ -1,0 +1,53 @@
+{
+    "name": "@scandiweb/twogame-theme",
+    "version": "0.0.1",
+    "license": "OSL-3.0",
+    "dependencies": {
+        "@babel/plugin-transform-typescript": "7.20.2",
+        "@scandipwa/eslint-config": "0.2.1",
+        "@scandipwa/scandipwa": "6.2.1",
+        "@scandipwa/scandipwa-scripts": "2.4.24",
+        "@scandipwa/ts-server-plugin": "0.0.4",
+        "@scandiweb/adobe-page-builder": "file:packages/@scandiweb/adobe-page-builder",
+        "@scandiweb/build-configuration-plugin": "file:packages/@scandiweb/build-configuration-plugin",
+        "@tilework/mosaic": "1.0.0",
+        "@tilework/mosaic-craco": "0.0.5",
+        "@types/node": "18.7.15",
+        "@types/react": "18.0.17",
+        "postcss": "8.4.5",
+        "preact-render-to-string": "^6.3.1",
+        "react-redux": "8.0.2"
+    },
+    "scandipwa": {
+        "themeAlias": "TwoGame",
+        "type": "theme",
+        "locales": {
+            "en_US": true
+        },
+        "parentTheme": "@scandipwa/scandipwa",
+        "extensions": {
+            "@scandipwa/ts-server-plugin": true,
+            "@scandiweb/adobe-page-builder": false,
+            "@scandiweb/build-configuration-plugin": false
+        }
+    },
+    "scripts": {
+        "start": "scandipwa-scripts start",
+        "build": "scandipwa-scripts build",
+        "postinstall": "scandipwa-scripts link",
+        "postupdate": "scandipwa-scripts link"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "proxy": "https://2games-yzm-1698296295-dev-jia.readymage.com"
+}

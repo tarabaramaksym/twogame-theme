@@ -1,0 +1,25 @@
+:root {
+    --search-input-padding-inline: 10px;
+    --search-input-background-color: var(--imported_input_background_color, var(--dark-color-3));
+    --search-input-background-color-focus: var(--imported_input_background_color, var(--dark-color-5));
+    --search-input-border-radius: var(--imported_input_border_radius, 10px);
+    --search-input-color: var(--imported_input_color, #b7b7b7);
+}
+
+.FilterSearchField {
+    padding-inline: var(--search-input-padding-inline);
+    color: var(--search-input-color);
+    background-color: var(--search-input-background-color);
+    border-radius: var(--search-input-border-radius);
+    border-width: 0;
+
+    &:focus,
+    &_isFocused {
+        border-width: 0;
+        background-color: var(--search-input-background-color-focus);
+    }
+
+    & + .Field-Icon {
+        inset-inline-end: var(--search-input-padding-inline);
+    }
+}

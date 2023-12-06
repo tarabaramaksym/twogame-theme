@@ -1,0 +1,58 @@
+:root {
+    --expandable-content-padding-inline-start: 28px;
+    --expandable-content-padding-inline-end: 16px;
+    --expandable-content-padding-block: 11px;
+    --expandable-content-color: var(--light-white);
+    --expandable-content-divider-color: var(--dark-color-6);
+}
+
+.ExpandableContent {
+    border-block-start: 1px solid var(--expandable-content-divider-color);
+
+    &:last-of-type {
+        border-block-end: 1px solid var(--expandable-content-divider-color);
+    }
+
+    &-Button {
+        cursor: pointer;
+        padding-block: var(--expandable-content-padding-block);
+        padding-inline-start: var(--expandable-content-padding-inline-start);
+        padding-inline-end: var(--expandable-content-padding-inline-end);
+
+        @include mobile {
+            padding-block: var(--expandable-content-padding-block);
+        }
+    }
+
+    &-Content {
+        padding-inline-start: var(--expandable-content-padding-inline-start);
+        padding-inline-end: var(--expandable-content-padding-inline-end);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+
+        @include desktop {
+            margin: 0;
+        }
+
+        &_isContentExpanded {
+            opacity: 1;
+            max-height: 100%;
+        }
+    }
+
+    &-Heading {
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: var(--semi-bold-weight);
+        line-height: normal;
+    }
+
+    .AddIcon,
+    .MinusIcon,
+    .ChevronIcon {
+        color: var(--dark-color-11);
+        width: 24px;
+        height: 24px;
+    }
+}
